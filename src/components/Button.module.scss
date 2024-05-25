@@ -1,9 +1,9 @@
-@import "../styles/sizes.scss";
+@import "../styles/sizes.scss", "../styles/color.scss", "../styles/button.scss";
 
 // Default
 .block {
-  background: #000;
-  color: #fff;
+  background: $black;
+  color: $white;
   border: none;
   padding: 16px 20px;
   border-radius: 8px;
@@ -11,15 +11,15 @@
   transition: all 0.1s ease-in-out;
   cursor: pointer;
   &:hover {
-    background: #333;
+    background: $gray_7;
   }
   &:disabled {
-    background: #ccc;
-    color: #000;
+    background: $gray_4;
+    color: $black;
     cursor: default;
   }
   &:active {
-    background: #ccc;
+    background: $gray_4;
   }
 }
 
@@ -36,4 +36,31 @@
   padding: $large;
 }
 
-// Color
+//Color
+.black {
+  @include black;
+}
+
+.white {
+  @include white;
+}
+
+// color
+.primary {
+  @include primary;
+}
+.primary-outline {
+  @include primary-outline;
+}
+.secondary {
+  @include secondary;
+}
+.secondary-outline {
+  @include secondary-outline;
+}
+.success {
+  @include success;
+}
+.failure {
+  @include failure;
+}
