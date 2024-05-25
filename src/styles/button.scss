@@ -18,6 +18,12 @@
     border: 1px solid $blue_5;
     color: $blue_5;
   }
+  &:disabled {
+    background: $gray_4;
+    color: $gray_6;
+    cursor: default;
+    border: 1px solid $gray_4;
+  }
 }
 @mixin primary-outline {
   background: none;
@@ -27,6 +33,12 @@
     background: $blue_5;
     border: 1px solid $blue_5;
     color: $black;
+  }
+  &:disabled {
+    background: $gray_4;
+    color: $gray_6;
+    cursor: default;
+    border: 1px solid $gray_4;
   }
 }
 
@@ -40,6 +52,12 @@
     border: 1px solid $grape_5;
     color: $grape_5;
   }
+  &:disabled {
+    background: $gray_4;
+    color: $gray_6;
+    cursor: default;
+    border: 1px solid $gray_4;
+  }
 }
 @mixin secondary-outline {
   background: none;
@@ -49,6 +67,12 @@
     background: $grape_5;
     color: $black;
     border: 1px solid $grape_5;
+  }
+  &:disabled {
+    background: $gray_4;
+    color: $gray_6;
+    cursor: default;
+    border: 1px solid $gray_4;
   }
 }
 
@@ -61,6 +85,12 @@
     background: $green_4;
     border: 1px solid $green_4;
   }
+  &:disabled {
+    background: $gray_4;
+    color: $gray_6;
+    cursor: default;
+    border: 1px solid $gray_4;
+  }
 }
 
 // failure
@@ -72,5 +102,11 @@
     background: $red_6;
     border: 1px solid $red_6;
     color: $white;
+  }
+  &:disabled {
+    background: $gray_4;
+    color: $gray_6;
+    cursor: default;
+    border: 1px solid $gray_4;
   }
 }
