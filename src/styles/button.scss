@@ -1,0 +1,76 @@
+@import "./color.scss";
+
+// default
+@mixin white {
+  background: $white;
+}
+@mixin black {
+  background: $black;
+}
+
+// primary
+@mixin primary {
+  background: $blue_5;
+  border: 1px solid $blue_5;
+  color: $black;
+  &:hover {
+    background: none;
+    border: 1px solid $blue_5;
+    color: $blue_5;
+  }
+}
+@mixin primary-outline {
+  background: none;
+  border: 1px solid $blue_5;
+  color: $blue_5;
+  &:hover {
+    background: $blue_5;
+    border: 1px solid $blue_5;
+    color: $black;
+  }
+}
+
+// secondary
+@mixin secondary {
+  background: $grape_5;
+  color: $black;
+  border: 1px solid $grape_5;
+  &:hover {
+    background: none;
+    border: 1px solid $grape_5;
+    color: $grape_5;
+  }
+}
+@mixin secondary-outline {
+  background: none;
+  border: 1px solid $grape_5;
+  color: $grape_5;
+  &:hover {
+    background: $grape_5;
+    color: $black;
+    border: 1px solid $grape_5;
+  }
+}
+
+// success
+@mixin success {
+  background: $green_6;
+  border: 1px solid $green_6;
+  color: $white;
+  &:hover {
+    background: $green_4;
+    border: 1px solid $green_4;
+  }
+}
+
+// failure
+@mixin failure {
+  background: none;
+  border: 1px solid $red_6;
+  color: $red_6;
+  &:hover {
+    background: $red_6;
+    border: 1px solid $red_6;
+    color: $white;
+  }
+}
