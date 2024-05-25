@@ -1,4 +1,9 @@
 import type { StorybookConfig } from "@storybook/react-webpack5";
+import path, { dirname, join } from "path";
+
+function getAbsolutePath(value: string): any {
+  return dirname(require.resolve(join(value, "package.json")));
+}
 
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
@@ -12,7 +17,7 @@ const config: StorybookConfig = {
     "@storybook/addon-actions",
   ],
   framework: {
-    name: "@storybook/react-webpack5",
+    name: getAbsolutePath("@storybook/react-webpack5"),
     options: {},
   },
   docs: {
@@ -25,6 +30,15 @@ const config: StorybookConfig = {
     reactDocgen: "react-docgen",
     reactDocgenTypescriptOptions: {},
     skipCompiler: true,
+  },
+  webpackFinal: async (config) => {
+    if (config.resolve) {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        "@": path.resolve(__dirname, "../src"),
+      };
+    }
+    return config;
   },
 };
 export default config;
