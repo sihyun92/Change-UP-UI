@@ -1,46 +1,18 @@
-# Getting Started with Create React App
+# Change-UP Framework 0.1
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 개요
+Change-UP Framework는 웹 애플리케이션 개발을 단순화하고 효율적으로 만드는 것을 목표로 합니다. <br>
+직관적이고 쉽게 사용할 수 있는 컴포넌트, 유연한 스타일링 옵션, 그리고 높은 확장성을 제공합니다.
 
-## Available Scripts
+## 주요 기능
+### `컴포넌트 기반 아키텍처`
+재사용 가능한 UI 컴포넌트를 통해 코드의 중복을 줄이고 유지보수를 용이하게 합니다.
 
-In the project directory, you can run:
+### `반응형 디자인`
+다양한 화면 크기와 디바이스에서 일관된 사용자 경험을 제공합니다.
 
-### `yarn start`
+### `테마 커스터마이징`
+기본 제공되는 테마를 수정하거나 새로운 테마를 만들어 애플리케이션의 브랜딩에 맞출 수 있습니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### `모듈러 CSS`
+각 컴포넌트에 모듈화된 CSS를 적용하여 스타일 충돌을 방지하고 관리성을 높였습니다.
