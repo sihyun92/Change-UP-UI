@@ -17,10 +17,7 @@
     border: 1px solid $black;
   }
   &:disabled {
-    background: $gray_4;
-    color: $black;
-    cursor: default;
-    border: 1px solid $gray_4;
+    @include inactive;
   }
   &:active {
     background: $gray_4;
