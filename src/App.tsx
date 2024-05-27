@@ -1,7 +1,8 @@
-import Button from "./components/Button";
+// import Button from "./components/Button";
+// import Title from "./components/Title/Title";
 
 function App() {
-  return <Button>Button</Button>;
+  return null;
 }
 
 export default App;
