@@ -1,0 +1,45 @@
+@import "../../styles/sizes.scss", "../../styles/color.scss";
+
+.block {
+  color: $gray_7;
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  margin: 8px 0;
+}
+
+// font-size
+.small {
+  font-size: 18px;
+}
+.medium {
+  font-size: 24px;
+}
+.large {
+  font-size: 32px;
+}
+.larger {
+  font-size: 40px;
+}
+.largest {
+  font-size: 48px;
+}
+
+// font-weight
+.light {
+  font-weight: 300;
+}
+.normal {
+  font-weight: 400;
+}
+.semi-bold {
+  font-weight: 600;
+}
+.bold {
+  font-weight: 700;
+}
+.extra-bold {
+  font-weight: 800;
+}
+.black {
+  font-weight: 900;
+}
