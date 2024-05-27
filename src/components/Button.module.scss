@@ -10,13 +10,17 @@
   font-size: 16px;
   transition: all 0.1s ease-in-out;
   cursor: pointer;
+  font-weight: 500;
   &:hover {
-    background: $gray_7;
+    background: none;
+    color: $black;
+    border: 1px solid $black;
   }
   &:disabled {
     background: $gray_4;
     color: $black;
     cursor: default;
+    border: 1px solid $gray_4;
   }
   &:active {
     background: $gray_4;
@@ -51,18 +55,23 @@
 .primary {
   @include primary;
 }
+
 .primary-outline {
   @include primary-outline;
 }
+
 .secondary {
   @include secondary;
 }
+
 .secondary-outline {
   @include secondary-outline;
 }
+
 .success {
   @include success;
 }
+
 .failure {
   @include failure;
 }
