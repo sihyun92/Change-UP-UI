@@ -8,6 +8,13 @@
   background: $black;
 }
 
+@mixin inactive {
+  background: $gray_4;
+  color: $gray_6;
+  cursor: default;
+  border: 1px solid $gray_4;
+}
+
 // primary
 @mixin primary {
   background: $blue_5;
@@ -19,10 +26,11 @@
     color: $blue_5;
   }
   &:disabled {
-    background: $gray_4;
-    color: $gray_6;
-    cursor: default;
-    border: 1px solid $gray_4;
+    @include inactive;
+  }
+  &:active:not(:disabled) {
+    background: $blue_2;
+    color: $blue_9;
   }
 }
 @mixin primary-outline {
@@ -35,10 +43,11 @@
     color: $black;
   }
   &:disabled {
-    background: $gray_4;
-    color: $gray_6;
-    cursor: default;
-    border: 1px solid $gray_4;
+    @include inactive;
+  }
+  &:active:not(:disabled) {
+    background: $blue_2;
+    color: $blue_9;
   }
 }
 
@@ -53,10 +62,7 @@
     color: $grape_5;
   }
   &:disabled {
-    background: $gray_4;
-    color: $gray_6;
-    cursor: default;
-    border: 1px solid $gray_4;
+    @include inactive;
   }
 }
 @mixin secondary-outline {
@@ -69,10 +75,7 @@
     border: 1px solid $grape_5;
   }
   &:disabled {
-    background: $gray_4;
-    color: $gray_6;
-    cursor: default;
-    border: 1px solid $gray_4;
+    @include inactive;
   }
 }
 
@@ -86,10 +89,7 @@
     border: 1px solid $green_4;
   }
   &:disabled {
-    background: $gray_4;
-    color: $gray_6;
-    cursor: default;
-    border: 1px solid $gray_4;
+    @include inactive;
   }
 }
 
@@ -104,9 +104,6 @@
     color: $white;
   }
   &:disabled {
-    background: $gray_4;
-    color: $gray_6;
-    cursor: default;
-    border: 1px solid $gray_4;
+    @include inactive;
   }
 }
