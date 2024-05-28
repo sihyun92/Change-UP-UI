@@ -1,0 +1,38 @@
+@import "./font.scss";
+
+// font-weight
+@mixin light {
+  font-weight: $light;
+}
+@mixin normal {
+  font-weight: $normal;
+}
+@mixin semi-bold {
+  font-weight: $semi-bold;
+}
+@mixin bold {
+  font-weight: $bold;
+}
+@mixin extra-bold {
+  font-weight: $extra-bold;
+}
+@mixin black {
+  font-weight: $black;
+}
+
+// font-size
+@mixin text-small {
+  font-weight: $text-small;
+}
+@mixin text-medium {
+  font-weight: $text-medium;
+}
+@mixin text-large {
+  font-weight: $text-large;
+}
+@mixin text-larger {
+  font-weight: $text-larger;
+}
+@mixin text-largest {
+  font-weight: $text-largest;
+}
