@@ -18,6 +18,7 @@ export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
   shadow?: boolean;
   backgroundColor: ModalBg;
   border?: ModalBorder;
+  visibleClose: boolean;
 }
 
 function Modal({ ...rest }: ModalProps) {
@@ -31,19 +32,27 @@ function Modal({ ...rest }: ModalProps) {
       )}
       {...rest}
     >
-      <Close />
+      {rest.visibleClose && <Close />}
       <div className={cx("content")}>
         <Text fontWeight="normal" size="medium">
           {rest.children}
         </Text>
-        <div className={cx("button-container")}>
-          <Button size="small" color="primary" outline>
-            1
-          </Button>
-          <Button size="small">
-            2
-          </Button>
-        </div>
+        {rest.visibleClose ? (
+          <div className={cx("button-container")}>
+            <Button size="small" color="primary">
+              Confirm
+            </Button>
+          </div>
+        ) : (
+          <div className={cx("button-container")}>
+            <Button size="small" color="primary" outline>
+              Confirm
+            </Button>
+            <Button size="small" color="cancel">
+              Cancel
+            </Button>
+          </div>
+        )}
       </div>
     </div>
   );
