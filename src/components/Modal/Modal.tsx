@@ -37,8 +37,12 @@ function Modal({ ...rest }: ModalProps) {
           {rest.children}
         </Text>
         <div className={cx("button-container")}>
-          <Button size="small">1</Button>
-          <Button size="small">2</Button>
+          <Button size="small" color="primary" outline>
+            1
+          </Button>
+          <Button size="small">
+            2
+          </Button>
         </div>
       </div>
     </div>
