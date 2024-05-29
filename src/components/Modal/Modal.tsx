@@ -37,22 +37,22 @@ function Modal({ ...rest }: ModalProps) {
         <Text fontWeight="normal" size="medium">
           {rest.children}
         </Text>
-        {rest.visibleClose ? (
-          <div className={cx("button-container")}>
+        <div className={cx("button-container")}>
+          {rest.visibleClose ? (
             <Button size="small" color="primary">
               Confirm
             </Button>
-          </div>
-        ) : (
-          <div className={cx("button-container")}>
-            <Button size="small" color="primary" outline>
-              Confirm
-            </Button>
-            <Button size="small" color="cancel">
-              Cancel
-            </Button>
-          </div>
-        )}
+          ) : (
+            <>
+              <Button size="small" color="primary" outline>
+                Confirm
+              </Button>
+              <Button size="small" color="cancel">
+                Cancel
+              </Button>
+            </>
+          )}
+        </div>
       </div>
     </div>
   );
