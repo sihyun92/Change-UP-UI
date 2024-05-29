@@ -107,3 +107,18 @@
     @include inactive;
   }
 }
+
+// cancel
+@mixin cancel {
+  background: $red_4;
+  border: 1px solid $red_4;
+  color: $white;
+  &:hover {
+    background: $red_6;
+    border: 1px solid $red_6;
+    color: $white;
+  }
+  &:disabled {
+    @include inactive;
+  }
+}
