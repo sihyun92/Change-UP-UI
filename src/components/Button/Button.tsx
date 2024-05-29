@@ -5,7 +5,12 @@ import classNames from "classnames/bind";
 const cx = classNames.bind(styles);
 
 export type ButtonSize = "small" | "medium" | "large";
-export type ButtonColor = "primary" | "secondary" | "success" | "failure";
+export type ButtonColor =
+  | "primary"
+  | "secondary"
+  | "success"
+  | "failure"
+  | "cancel";
 export type ButtonOutline = boolean;
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
