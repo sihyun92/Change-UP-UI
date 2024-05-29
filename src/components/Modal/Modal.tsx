@@ -1,9 +1,8 @@
 import classNames from "classnames/bind";
 import styles from "./Modal.module.scss";
-import Text from "../Text/Text";
-import Button from "../Button/Button";
 import Close from "../Close/Close";
 import { HTMLAttributes } from "react";
+import ModalBackground from "./ModalBackground";
 
 const cx = classNames.bind(styles);
 
@@ -23,38 +22,22 @@ export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
 
 function Modal({ ...rest }: ModalProps) {
   return (
-    <div
-      className={cx(
-        "block",
-        `${rest.shadow ? "shadow" : ""}`,
-        `${rest.backgroundColor}`,
-        `${rest.border}`,
-      )}
-      {...rest}
-    >
-      {rest.visibleClose && <Close />}
-      <div className={cx("content")}>
-        <Text fontWeight="normal" size="medium">
-          {rest.children}
-        </Text>
-        <div className={cx("button-container")}>
-          {rest.visibleClose ? (
-            <Button size="small" color="primary">
-              Confirm
-            </Button>
-          ) : (
-            <>
-              <Button size="small" color="primary" outline>
-                Confirm
-              </Button>
-              <Button size="small" color="cancel">
-                Cancel
-              </Button>
-            </>
+    <>
+      <ModalBackground>
+        <div
+          className={cx(
+            "block",
+            `${rest.shadow ? "shadow" : ""}`,
+            `${rest.backgroundColor}`,
+            `${rest.border}`,
           )}
+          {...rest}
+        >
+          {rest.visibleClose && <Close />}
+          <div className={cx("content")}>{rest.children}</div>
         </div>
-      </div>
-    </div>
+      </ModalBackground>
+    </>
   );
 }
 
