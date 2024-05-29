@@ -1,0 +1,54 @@
+@import "../../styles/color.scss";
+
+.block {
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  animation: mouse-out 0.2s backwards;
+  @keyframes mouse-out {
+    0% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: none;
+    }
+  }
+  &:hover {
+    animation: mouse-over 0.2s forwards;
+    @keyframes mouse-over {
+      0% {
+        transform: none;
+      }
+      100% {
+        transform: scale(1.3);
+      }
+    }
+    span {
+      background: $red_7;
+    }
+  }
+  span {
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    width: inherit;
+    height: 3px;
+    background: $black;
+    border-radius: 16px;
+    &:first-child {
+      transform: rotate(-45deg);
+    }
+    &:last-child {
+      transform: rotate(45deg);
+    }
+  }
+}
