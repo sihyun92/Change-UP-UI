@@ -3,7 +3,7 @@ import styles from "./Modal.module.scss";
 import Text from "../Text/Text";
 import Button from "../Button/Button";
 import Close from "../Close/Close";
-import { ComponentProps, HTMLAttributes, ReactNode } from "react";
+import { HTMLAttributes } from "react";
 
 const cx = classNames.bind(styles);
 
@@ -14,7 +14,7 @@ export type ModalBorder =
   | "warning-border"
   | "error-border";
 
-export interface ModalProps extends ComponentProps<"div"> {
+export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
   shadow?: boolean;
   backgroundColor: ModalBg;
   border?: ModalBorder;
