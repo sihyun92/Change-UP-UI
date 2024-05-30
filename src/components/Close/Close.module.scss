@@ -37,6 +37,9 @@
       background: $red_7;
     }
   }
+  &:active {
+    animation: 0.2s forwards;
+  }
   span {
     transition: all 0.2s ease-in-out;
     position: absolute;
