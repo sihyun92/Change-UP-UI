@@ -1,0 +1,36 @@
+@import "../../styles/color.scss";
+
+// text
+.block {
+  padding: 4px 8px;
+  &:focus {
+    &::placeholder {
+      color: transparent;
+    }
+  }
+  &::placeholder {
+    color: $gray_4;
+  }
+}
+
+.border {
+  border: 2px solid $blue_3;
+  border-radius: 4px;
+  color: $gray_8;
+  &:focus {
+    border: 2px solid $blue_6;
+    outline: none;
+  }
+  &::placeholder {
+    color: $gray_4;
+  }
+}
+
+.underline {
+  border: none;
+  border-bottom: 2px solid $blue_3;
+  &:focus {
+    border-bottom: 2px solid $blue_6;
+    outline: none;
+  }
+}
