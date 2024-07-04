@@ -7,22 +7,15 @@
   color: $white;
   border: none;
   padding: 16px 20px;
-  border-radius: 8px;
   font-size: 16px;
   transition: all 0.1s ease-in-out;
   cursor: pointer;
   font-weight: 500;
-  &:hover {
-    background: none;
-    color: $black;
-    border: 1px solid $black;
-  }
-  &:disabled {
-    @include inactive;
-  }
-  &:active {
-    background: $gray_4;
-  }
+  border: 1px solid $black;
+}
+
+.shadow {
+  box-shadow: 2px 2px 4px rgba($color: #000, $alpha: 0.7);
 }
 
 // Size
@@ -39,6 +32,15 @@
 .large {
   padding: $large;
   font-size: 20px;
+}
+
+// Shape
+.box {
+  border-radius: 0;
+}
+
+.rounded {
+  border-radius: 16px;
 }
 
 //Color
