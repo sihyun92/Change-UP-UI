@@ -10,42 +10,16 @@ const meta: Meta<typeof Button> = {
   },
   argTypes: {
     onClick: {
-      description: "이벤트 함수",
+      description: "event function",
       table: {
         type: { summary: "() => void" },
       },
     },
     children: {
-      description: "버튼에 들어갈 내용",
-    },
-    outline: {
-      description: "outline 추가 여부(default는 지원 안함)",
+      description: "content",
       table: {
-        defaultValue: {
-          summary: "false",
-        },
-      },
-    },
-    size: {
-      description: "버튼 사이즈",
-      table: {
-        defaultValue: {
-          summary: "small",
-        },
         type: {
-          summary: "string",
-        },
-      },
-    },
-    color: {
-      description: "버튼 색상",
-      control: { type: "radio" },
-      table: {
-        defaultValue: {
-          summary: "null",
-        },
-        type: {
-          summary: "string",
+          summary: "string | ReactNode",
         },
       },
     },
@@ -60,6 +34,48 @@ const meta: Meta<typeof Button> = {
         },
       },
     },
+    color: {
+      description: "font color(hex | rgb | rgba | color-name)",
+      control: { type: "color" },
+      table: {
+        type: {
+          summary: "string",
+        },
+      },
+    },
+    background: {
+      description: "background color(hex | rgb | rgba | color-name)",
+      control: { type: "color" },
+      table: {
+        type: {
+          summary: "string",
+        },
+      },
+    },
+    fontSize: {
+      description: "font size(px | em | rem)",
+    },
+    padding: {
+      description: "padding(px | em | rem)",
+    },
+    radius: {
+      description: "button radius(px | em | rem)",
+    },
+    shape: {
+      description: "button shape",
+      control: { type: "radio" },
+      table: {
+        type: {
+          summary: "string",
+        },
+      },
+    },
+    border: {
+      description: "border",
+    },
+    shadow: {
+      description: "shadow",
+    },
   },
   tags: ["autodocs"],
 };
@@ -67,65 +83,67 @@ const meta: Meta<typeof Button> = {
 export default meta;
 type Story = StoryObj<typeof Button>;
 
-export const Default: Story = {
+export const Custom: Story = {
   args: {
     children: "Button",
-    outline: false,
+    buttonOutline: false,
     disabled: false,
+    shadow: true,
+    fontSize: "14px",
+    padding: "8px 16px",
+    background: "red",
+    color: "#000",
+    radius: "8px",
+    border: "none",
+    disabledBackground: "gray",
+    disabledColor: "#000",
+    disabledBorder: "none",
+    hoverBackground: "blue",
+    hoverColor: "#fff",
   },
 };
 
 export const Primary: Story = {
   args: {
     children: "Button",
-    color: "primary",
-    outline: false,
-  },
-  parameters: {
-    controls: { include: ["children", "outline", "size"], exclude: ["color"] },
+    buttonOutline: false,
+    disabled: false,
+    buttonColor: "primary",
   },
 };
 
 export const Secondary: Story = {
   args: {
     children: "Button",
-    color: "secondary",
-    outline: false,
-  },
-  parameters: {
-    controls: { include: ["children", "outline", "size"], exclude: ["color"] },
-  },
-};
-
-export const Disabled: Story = {
-  args: {
-    children: "Button",
-    disabled: true,
-  },
-  parameters: {
-    controls: {
-      include: ["children", "size"],
-      exclude: ["color", "outline"],
-    },
-  },
-};
-
-export const Success: Story = {
-  args: {
-    children: "Button",
-    color: "success",
-  },
-  parameters: {
-    controls: { include: ["children", "size"], exclude: ["color"] },
+    buttonOutline: false,
+    disabled: false,
+    buttonColor: "secondary",
   },
 };
 
 export const Failure: Story = {
   args: {
     children: "Button",
-    color: "failure",
+    buttonOutline: false,
+    disabled: false,
+    buttonColor: "failure",
   },
-  parameters: {
-    controls: { include: ["children", "size"], exclude: ["color"] },
+};
+
+export const Success: Story = {
+  args: {
+    children: "Button",
+    buttonOutline: false,
+    disabled: false,
+    buttonColor: "success",
+  },
+};
+
+export const Cancel: Story = {
+  args: {
+    children: "Button",
+    buttonOutline: false,
+    disabled: false,
+    buttonColor: "cancel",
   },
 };
