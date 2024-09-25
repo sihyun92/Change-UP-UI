@@ -9,10 +9,22 @@
 }
 
 @mixin inactive {
-  background: $gray_4;
-  color: $gray_6;
+  background: $gray_3;
+  color: $white;
   cursor: default;
   border: 1px solid $gray_4;
+}
+
+// active
+@mixin primary-active {
+  background: $blue_2;
+  color: $blue_5;
+  border: 1px solid $blue_2;
+}
+@mixin secondary-active {
+  background: $grape_5;
+  color: $white;
+  border: 1px solid $grape_5;
 }
 
 // primary
@@ -29,8 +41,7 @@
     @include inactive;
   }
   &:active:not(:disabled) {
-    background: $blue_2;
-    color: $blue_9;
+    @include primary-active;
   }
 }
 @mixin primary-outline {
@@ -46,8 +57,7 @@
     @include inactive;
   }
   &:active:not(:disabled) {
-    background: $blue_2;
-    color: $blue_9;
+    @include primary-active;
   }
 }
 
@@ -64,6 +74,9 @@
   &:disabled {
     @include inactive;
   }
+  &:active:not(:disabled) {
+    @include secondary-active;
+  }
 }
 @mixin secondary-outline {
   background: none;
@@ -76,6 +89,9 @@
   }
   &:disabled {
     @include inactive;
+  }
+  &:active:not(:disabled) {
+    @include secondary-active;
   }
 }
 
@@ -90,6 +106,9 @@
   }
   &:disabled {
     @include inactive;
+  }
+  &:active:not(:disabled) {
+    background: $green_7;
   }
 }
 
@@ -106,19 +125,25 @@
   &:disabled {
     @include inactive;
   }
+  &:active:not(:disabled) {
+    background: $red_7;
+  }
 }
 
 // cancel
 @mixin cancel {
-  background: $red_4;
-  border: 1px solid $red_4;
+  background: $red_6;
+  border: 1px solid $red_6;
   color: $white;
   &:hover {
-    background: $red_6;
-    border: 1px solid $red_6;
+    background: $red_4;
+    border: 1px solid $red_4;
     color: $white;
   }
   &:disabled {
     @include inactive;
+  }
+  &:active:not(:disabled) {
+    background: $red_7;
   }
 }
