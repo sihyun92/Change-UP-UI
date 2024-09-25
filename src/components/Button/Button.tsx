@@ -6,8 +6,10 @@ import { ButtonProps } from "@/lib/interface/button";
 const cx = classNames.bind(styles);
 
 function Button({ ...rest }: ButtonProps) {
-  // hook & function
+  // hook
   const [hover, setHover] = useState(false);
+
+  // function
   const onMouseEnter = useCallback(() => {
     setHover(true);
   }, []);
@@ -23,6 +25,7 @@ function Button({ ...rest }: ButtonProps) {
         : ""
       : ""
   }`;
+
   // secondary outline className
   const secondaryOutline = `${
     rest.buttonOutline
@@ -32,7 +35,7 @@ function Button({ ...rest }: ButtonProps) {
       : ""
   }`;
 
-  // dynamicStyle
+  // dynamic style
   const dynamicStyle: CSSProperties = {
     color:
       (hover ? rest.hoverColor : rest.color) &&
@@ -48,6 +51,7 @@ function Button({ ...rest }: ButtonProps) {
       (rest.disabled ? rest.disabledBorder : rest.border),
   };
 
+  // render
   return (
     <button
       style={dynamicStyle}
